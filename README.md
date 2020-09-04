@@ -1,79 +1,23 @@
-# Dockerized ReactJS application
+# Jest/Enzyme/Snapshot Examples
 
-![Docker plus React plus Codefresh](docker-reactjs-codefresh.jpg)
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-This is an example Node application that uses React, Yarn and Docker.
-It is packaged using Codefresh.
-
-More details can be found in [the documentation page](https://codefresh.io/docs/docs/learn-by-example/nodejs/react/).
-
-
-
-## Instructions
-
-To install dependencies 
+# Quick Start
 
 ```
-yarn install 
+yarn install
+yarn start
 ```
 
-or
+The above commands will install dependencies and start the app. To run tests, run `yarn test` on a separate command line.
 
-```
-npm install 
-```
+## Testing libraries
 
-## To run tests
+This instance of create-react-app has been enhanced with the following testing libraries:
 
-```
-yarn test 
-```
-
-or
-
-```
-npm test 
-```
-
-## To run the webapp manually
-
-```
-yarn start 
-```
-
-or
-
-```
-npm start 
-```
-
-....and navigate your browser to  http://localhost:3000/
-
-## To create a docker image
-
-```
-docker build -t my-react-app .
-```
-
-
-## To run the docker image
-
-```
-docker run -p 80:80 my-react-app
-```
-
-
-## To use this project in Codefresh 
-
-There is also a [codefresh.yml](codefresh.yml) for easy usage with the [Codefresh](codefresh.io) CI/CD platform.
-
-
-Enjoy!
-
-
-
-
-
-
-
-
+| Library                 | Description                                                                        |
+| ----------------------- | ---------------------------------------------------------------------------------- |
+| Jest                    | Automated testing                                                                  |
+| Enzyme                  | Unit test React components in isolation via `shallow` or with children via `mount` |
+| enzyme-adapter-react-16 | Configures enzyme to work with React 16                                            |
+| enzyme-to-json          | Convert Enzyme wrappers to a format compatible with Jest snapshot testing.         |
